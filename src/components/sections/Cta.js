@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {SectionProps} from '../../utils/SectionProps';
 import Button from '../elements/Button';
 // import Modal from "../elements/Modal";
+import SignupForm from './SignupForm';
 
 const propTypes = {
   ...SectionProps.types,
@@ -56,6 +57,7 @@ const Cta = ({
             </Button>
           </div>
         </div>
+        <SignupForm />
       </div>
     </section>
   );
