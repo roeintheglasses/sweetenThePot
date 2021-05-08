@@ -35,7 +35,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
             <FooterSocial />
           </div>
           <div className="footer-bottom center text-l">
-            <div className="footer-copyright">Made with ❤ by Roe</div>
+            <div className="footer-copyright">Made with ❤ by Roe & Friends</div>
           </div>
         </div>
       </div>
