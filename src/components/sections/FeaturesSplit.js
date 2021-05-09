@@ -4,8 +4,9 @@ import {SectionSplitProps} from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
-
 import Image from '../elements/Image';
+
+import DevFolio from '../../assets/images/devFolio.png';
 import vedArt from '../../assets/images/vedArt.jpg';
 import UniFolio from '../../assets/images/UniFolio.png';
 import DesignerFolio from '../../assets/images/designerFolio.png';
@@ -124,7 +125,7 @@ const FeaturesSplit = ({
                   )}
                   data-reveal-container=".split-item">
                   <Image
-                    src={require('./../../assets/images/features-split-image-01.png')}
+                    src={DevFolio}
                     alt="Features split 01"
                     width={528}
                     height={396}
