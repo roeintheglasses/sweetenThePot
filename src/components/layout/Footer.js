@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import Logo from "./partials/Logo";
-import FooterSocial from "./partials/FooterSocial";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Logo from './partials/Logo';
+import FooterSocial from './partials/FooterSocial';
 
 const propTypes = {
   topOuterDivider: PropTypes.bool,
@@ -14,11 +14,11 @@ const defaultProps = {
   topDivider: false,
 };
 
-const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
+const Footer = ({className, topOuterDivider, topDivider, ...props}) => {
   const classes = classNames(
-    "site-footer center-content-mobile",
-    topOuterDivider && "has-top-divider",
-    className
+    'site-footer center-content-mobile',
+    topOuterDivider && 'has-top-divider',
+    className,
   );
 
   return (
@@ -26,16 +26,18 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
       <div className="container">
         <div
           className={classNames(
-            "site-footer-inner",
-            topDivider && "has-top-divider"
-          )}
-        >
+            'site-footer-inner',
+            topDivider && 'has-top-divider',
+          )}>
           <div className="footer-top space-between text-xxs">
             <Logo />
             <FooterSocial />
           </div>
           <div className="footer-bottom center text-l">
-            <div className="footer-copyright">Made with ❤ by Roe & Friends</div>
+            <div className="footer-copyright">
+              Made with ❤ by Roe & Friends | Images by{' '}
+              <a href="https://storyset.com/">Storyset</a>{' '}
+            </div>
           </div>
         </div>
       </div>

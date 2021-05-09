@@ -61,14 +61,16 @@ const FeaturesSplit = ({
   const sectionHeader = {
     title: 'What is this ? ',
     paragraph:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.',
+      'Sweeten The Pot is an initiative by few CS Grads that aims to help in raising money for Covid Relif while ensuring there is an active incentive for people to donate. You can think of this as a community service. All you need to do is Donate an amount of 200 or more to one of the Covid Relif charaties listed below and show up the proof to us. In return we will get you a dope-ass portfolio website / Art ( More insentives will be added in future). It is that simple.',
   };
 
   return (
     <section {...props} className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="center-content">
+            <h5>We Make, You Donate.</h5>
+          </SectionHeader>
 
           <ButtonGroup className="splitButtonGroup mb-24">
             <Button
@@ -104,10 +106,8 @@ const FeaturesSplit = ({
                   </div>
                   <h3 className="mt-0 mb-12"> Dev Folio</h3>
                   <p className="m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua — Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    A clean, beautiful and responsive portfolio for Developers,
+                    by Developers.
                   </p>
                   <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                     <span className="testimonial-item-link">
@@ -141,7 +141,7 @@ const FeaturesSplit = ({
                   </div>
                   <h3 className="mt-0 mb-12"> Designer Folio</h3>
                   <p className="m-0">
-                    A Clean, Minimal and Unique portfolio for everyone.
+                    A Minimal and Colorful single page portfolio for Designers.
                   </p>
                   <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                     <span className="testimonial-item-link">
@@ -222,7 +222,10 @@ const FeaturesSplit = ({
                   </p>
                   <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                     <span className="testimonial-item-link">
-                      <a target="_blank" rel="noopener noreferrer" href="#dev">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.instagram.com/im_vedanshu/">
                         Check him out
                       </a>
                     </span>

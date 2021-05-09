@@ -1,20 +1,19 @@
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
-const FooterSocial = ({ className, ...props }) => {
-  const classes = classNames("footer-social", className);
+const FooterSocial = ({className, ...props}) => {
+  const classes = classNames('footer-social', className);
 
   return (
     <div {...props} className={classes}>
       <ul className="list-reset">
         <li>
-          <a href="https://google.com/">
+          <a href="https://www.instagram.com/sweeten.the.pot/">
             <svg
-              width="16"
-              height="16"
+              width="20"
+              height="20"
               viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <title>Instagram</title>
               <g>
                 <circle cx="12.145" cy="3.892" r="1" />

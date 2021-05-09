@@ -1,5 +1,6 @@
 import React from 'react';
-
+import FormLabel from '../elements/FormLabel';
+import Input from '../elements/Input';
 export default function SignupForm() {
   return (
     <form
@@ -8,60 +9,73 @@ export default function SignupForm() {
       enctype="multipart/form-data"
       className="signupForm reveal-from-left">
       <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />
+      <FormLabel>
+        <Input
+          label="Name"
+          placeholder="Enter your name"
+          type="text"
+          name="name"
+          required
+        />
+      </FormLabel>
+      <FormLabel>
+        <Input
+          label="Email"
+          placeholder="Enter your email"
+          type="email"
+          name="email"
+          required
+        />
+      </FormLabel>
 
-      <input
-        className="form-input"
-        placeholder="Enter your name"
-        type="text"
-        name="name"
-        required
-      />
-      <input
-        className="form-input"
-        placeholder="Enter social handle"
-        type="text"
-        name="social"
-      />
-      <input
-        className="form-input"
-        placeholder="Enter your email"
-        type="email"
-        name="email"
-        required
-      />
-      <input
-        className="form-input "
-        type="file"
-        name="donationProof"
-        required
-      />
-      <select
-        className="form-input"
-        name="service"
-        id="service"
-        placeholder="Select one"
-        required>
-        <option className="form-input" value="select">
-          Select one
-        </option>
-        <option className="form-input" value="devFolio">
-          Dev Folio
-        </option>
-        <option className="form-input" value="designerFolio">
-          Designer Folio
-        </option>
-        <option className="form-input" value="universalFolio">
-          Universal Folio
-        </option>
-        <option className="form-input" value="artVed">
-          Art By Ved
-        </option>
-      </select>
+      <FormLabel>
+        Upload donation proof
+        <input
+          className="form-input form-upload"
+          type="file"
+          name="donationProof"
+          required
+        />
+      </FormLabel>
 
-      <input className="form-input " type="file" name="resume" />
+      <FormLabel>
+        Select what you need
+        <select
+          className="form-input"
+          name="service"
+          id="service"
+          placeholder="Select one"
+          required>
+          <option className="form-input" value="select">
+            Select one
+          </option>
+          <option className="form-input" value="devFolio">
+            Dev Folio
+          </option>
+          <option className="form-input" value="designerFolio">
+            Designer Folio
+          </option>
+          <option className="form-input" value="universalFolio">
+            Universal Folio
+          </option>
+          <option className="form-input" value="artVed">
+            Art By Ved
+          </option>
+        </select>
+      </FormLabel>
 
-      <button className="button button-dark" type="submit">
-        Send
+      <FormLabel>
+        Upload your resume/picture for your Portfolio/Art
+        <input
+          className="form-input form-upload"
+          type="file"
+          name="resume"
+          required
+        />
+      </FormLabel>
+
+      <button className="button button-dark mt-8" type="submit">
+        Submit
       </button>
     </form>
   );

@@ -546,3 +546,14 @@ textarea.form-input {
 		}
     }
 }
+
+.form-upload{
+	width: 77%;
+}
+
+::-ms-browse,
+::-webkit-file-upload-button{
+	display: none;
+
+}
+
