@@ -17,16 +17,31 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB88L4714W"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-NB88L4714W');
     </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf56cwaAAAAAOtAgWLBmOXSEaldHBKEZ0ppxttK"></script>
+
 </head>
 
 <body class="has-animations">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root" class="body-wrap"></div>
 </body>
+
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Lf56cwaAAAAAOtAgWLBmOXSEaldHBKEZ0ppxttK', {action: 'homepage'})
+        .then(function(token) {
+          document.getElementById('captchaResponse').value = token;
+        });
+      });
+ </script>
 
 </html>

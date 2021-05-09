@@ -35,3 +35,14 @@
 		}
 	}
 }
+
+.signupForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.signupForm input {
+	margin: 10px 20px;
+}

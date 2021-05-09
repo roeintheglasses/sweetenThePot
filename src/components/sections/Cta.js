@@ -46,18 +46,14 @@ const Cta = ({
   return (
     <section {...props} className={outerClasses}>
       <div className="container">
-        {/* <Modal /> */}
         <div className={innerClasses}>
           <div className="cta-slogan">
             <h3 className="m-0">Donate & Sign Up</h3>
           </div>
           <div className="cta-action">
-            <Button tag="a" color="dark" wideMobile href="#FormLink">
-              Sign Up
-            </Button>
+            <SignupForm />
           </div>
         </div>
-        <SignupForm />
       </div>
     </section>
   );
