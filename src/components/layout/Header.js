@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { Link } from "react-router-dom";
-import Logo from "./partials/Logo";
+import React, {useState, useRef, useEffect} from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import {Link} from 'react-router-dom';
+import Logo from './partials/Logo';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -13,7 +13,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  navPosition: "",
+  navPosition: '',
   hideNav: false,
   hideSignin: false,
   bottomOuterDivider: false,
@@ -36,23 +36,23 @@ const Header = ({
 
   useEffect(() => {
     isActive && openMenu();
-    document.addEventListener("keydown", keyPress);
-    document.addEventListener("click", clickOutside);
+    document.addEventListener('keydown', keyPress);
+    document.addEventListener('click', clickOutside);
     return () => {
-      document.removeEventListener("keydown", keyPress);
-      document.removeEventListener("click", clickOutside);
+      document.removeEventListener('keydown', keyPress);
+      document.removeEventListener('click', clickOutside);
       closeMenu();
     };
   });
 
   const openMenu = () => {
-    document.body.classList.add("off-nav-is-active");
-    nav.current.style.maxHeight = nav.current.scrollHeight + "px";
+    document.body.classList.add('off-nav-is-active');
+    nav.current.style.maxHeight = nav.current.scrollHeight + 'px';
     setIsactive(true);
   };
 
   const closeMenu = () => {
-    document.body.classList.remove("off-nav-is-active");
+    document.body.classList.remove('off-nav-is-active');
     nav.current && (nav.current.style.maxHeight = null);
     setIsactive(false);
   };
@@ -73,28 +73,26 @@ const Header = ({
   };
 
   const classes = classNames(
-    "site-header",
-    bottomOuterDivider && "has-bottom-divider",
-    className
+    'site-header',
+    bottomOuterDivider && 'has-bottom-divider',
+    className,
   );
 
   return (
     <header {...props} className={classes}>
-      <div className="container">
+      <div className="container mt-16">
         <div
           className={classNames(
-            "site-header-inner",
-            bottomDivider && "has-bottom-divider"
-          )}
-        >
+            'site-header-inner',
+            bottomDivider && 'has-bottom-divider',
+          )}>
           <Logo />
           {!hideNav && (
             <>
               <button
                 ref={hamburger}
                 className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
-              >
+                onClick={isActive ? closeMenu : openMenu}>
                 <span className="screen-reader">Menu</span>
                 <span className="hamburger">
                   <span className="hamburger-inner"></span>
@@ -102,15 +100,13 @@ const Header = ({
               </button>
               <nav
                 ref={nav}
-                className={classNames("header-nav", isActive && "is-active")}
-              >
+                className={classNames('header-nav', isActive && 'is-active')}>
                 <div className="header-nav-inner">
                   <ul
                     className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                  >
+                      'list-reset text-xs',
+                      navPosition && `header-nav-${navPosition}`,
+                    )}>
                     {/* <li>
                       <Link to="#0" onClick={closeMenu}>Documentation</Link>
                     </li> */}
@@ -118,13 +114,12 @@ const Header = ({
                   {!hideSignin && (
                     <ul className="list-reset header-nav-right">
                       <li>
-                        <Link
-                          to="#0"
+                        <a
+                          href="#signUp"
                           className="button button-primary button-wide-mobile button-sm"
-                          onClick={closeMenu}
-                        >
+                          onClick={closeMenu}>
                           Sign up
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   )}

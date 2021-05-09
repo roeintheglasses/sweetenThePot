@@ -28,6 +28,10 @@
 
 	.cta-slogan {
 		margin-bottom: $cta-slogan--padding-v__desktop;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
 		.cta-split & {
 			margin-bottom: 0;
@@ -43,6 +47,6 @@
 	align-items: center;
 }
 
-.signupForm input {
+.signupForm input,  .signupForm select{
 	margin: 10px 20px;
 }

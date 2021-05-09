@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {SectionProps} from '../../utils/SectionProps';
+import donateImage from '../../assets/images/donate.svg';
+import Image from '../elements/Image';
+
 // import Button from '../elements/Button';
 // import Modal from "../elements/Modal";
 import SignupForm from './SignupForm';
@@ -45,10 +48,11 @@ const Cta = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container">
+      <div className="container" id="signUp">
         <div className={innerClasses}>
           <div className="cta-slogan">
             <h3 className="m-0">Donate & Sign Up</h3>
+            <Image src={donateImage} alt="Hero" width={400} height={400} />
           </div>
           <div className="cta-action">
             <SignupForm />
