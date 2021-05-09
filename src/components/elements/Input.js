@@ -8,7 +8,20 @@ const propTypes = {
   children: PropTypes.node,
   label: PropTypes.string,
   labelHidden: PropTypes.bool,
-  type: PropTypes.oneOf(['textarea', 'text', 'email', 'tel', 'password', 'number', 'search', 'color', 'date', 'time', 'datetime-local']),
+  type: PropTypes.oneOf([
+    'textarea',
+    'file',
+    'text',
+    'email',
+    'tel',
+    'password',
+    'number',
+    'search',
+    'color',
+    'date',
+    'time',
+    'datetime-local',
+  ]),
   name: PropTypes.string,
   status: PropTypes.string,
   disabled: PropTypes.bool,
@@ -18,8 +31,8 @@ const propTypes = {
   size: PropTypes.string,
   placeholder: PropTypes.string,
   rows: PropTypes.number,
-  hint: PropTypes.string
-}
+  hint: PropTypes.string,
+};
 
 const defaultProps = {
   children: null,
@@ -35,8 +48,8 @@ const defaultProps = {
   size: '',
   placeholder: '',
   rows: 3,
-  hint: null
-}
+  hint: null,
+};
 
 const Input = ({
   className,
@@ -56,26 +69,29 @@ const Input = ({
   hint,
   ...props
 }) => {
-
   const wrapperClasses = classNames(
-    (formGroup && formGroup !== '') && (formGroup === 'desktop' ? 'form-group-desktop' : 'form-group'),
-    (hasIcon && hasIcon !== '') && 'has-icon-' + hasIcon
+    formGroup &&
+      formGroup !== '' &&
+      (formGroup === 'desktop' ? 'form-group-desktop' : 'form-group'),
+    hasIcon && hasIcon !== '' && 'has-icon-' + hasIcon,
   );
 
   const classes = classNames(
     'form-input',
     size && `form-input-${size}`,
     status && `form-${status}`,
-    className
+    className,
   );
 
   const Component = type === 'textarea' ? 'textarea' : 'input';
   return (
     <>
-      {label && <FormLabel labelHidden={labelHidden} id={props.id}>{label}</FormLabel>}
-      <div
-        className={wrapperClasses}
-      >
+      {label && (
+        <FormLabel labelHidden={labelHidden} id={props.id}>
+          {label}
+        </FormLabel>
+      )}
+      <div className={wrapperClasses}>
         <Component
           {...props}
           type={type !== 'textarea' ? type : null}
@@ -91,7 +107,7 @@ const Input = ({
       {hint && <FormHint status={status}>{hint}</FormHint>}
     </>
   );
-}
+};
 
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;

@@ -68,6 +68,7 @@ const Testimonial = ({
                   <span className="testimonial-item-link">
                     <a
                       target="_blank"
+                      rel="noopener noreferrer"
                       href="http://goonj.org/donate/?gclid=CjwKCAjwkN6EBhBNEiwADVfya9fHEkOa4tfPq3FsFqvCngE7I5Ld7klgIXkSNuI-X_pAnPu7WrwLoBoC39cQAvD_BwE">
                       Donate
                     </a>
@@ -90,6 +91,7 @@ const Testimonial = ({
                   <span className="testimonial-item-link">
                     <a
                       target="_blank"
+                      rel="noopener noreferrer"
                       href="https://www.donatekart.com/Hemkunt-Foundation/Give-Oxygen-Cylinders/?gclid=CjwKCAjwkN6EBhBNEiwADVfyawS3KBknjY70F2Urj4-d6558bY7kzO76VvxJyusDelKDEILaHK9o5RoC7SAQAvD_BwE">
                       Donate
                     </a>
@@ -113,6 +115,7 @@ const Testimonial = ({
                   <span className="testimonial-item-link">
                     <a
                       target="_blank"
+                      rel="noopener noreferrer"
                       href="https://www.feedingindia.org/donate/help-save-my-india#donate-section">
                       Donate
                     </a>

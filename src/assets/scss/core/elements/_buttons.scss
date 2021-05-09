@@ -169,3 +169,15 @@
         transform: rotate(360deg);
     }
 }
+
+.splitButtonGroup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.commonButtons {
+
+	width:  30vmin;
+
+}
