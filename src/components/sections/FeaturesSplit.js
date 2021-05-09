@@ -112,7 +112,7 @@ const FeaturesSplit = ({
                   </p>
                   <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                     <span className="testimonial-item-link">
-                      <a target="_blank" href="#dev">
+                      <a target="_blank" href="https://devfolio1.netlify.app/">
                         Check it out
                       </a>
                     </span>
