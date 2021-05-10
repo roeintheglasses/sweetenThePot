@@ -34,6 +34,7 @@ export default function SignupForm() {
           className="form-input form-upload"
           type="file"
           name="donationProof"
+          accept=".jpg,.png"
           required
         />
       </FormLabel>
@@ -61,16 +62,19 @@ export default function SignupForm() {
           <option className="form-input" value="artVed">
             Art By Ved
           </option>
+          <option className="form-input" value="artVed">
+            Art By Chilly
+          </option>
         </select>
       </FormLabel>
 
       <FormLabel>
-        Upload your resume/picture for your Portfolio/Art
+        In case of Portfolio/Custom Art please upload your resume / picture
         <input
           className="form-input form-upload"
           type="file"
           name="resume"
-          required
+          accept=".jpg,.png,.pdf,.xls,.xlsx"
         />
       </FormLabel>
       <button className="button button-dark mt-8" type="submit">

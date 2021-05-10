@@ -5,9 +5,11 @@ import SectionHeader from './partials/SectionHeader';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
+import ArtistView from './partials/artistView';
 
 import DevFolio from '../../assets/images/devFolio.png';
 import vedArt from '../../assets/images/vedArt.jpg';
+import chillyArt from '../../assets/images/chilly.png';
 import UniFolio from '../../assets/images/UniFolio.png';
 import DesignerFolio from '../../assets/images/designerFolio.png';
 
@@ -139,6 +141,7 @@ const FeaturesSplit = ({
                     alt="Features split 01"
                     width={528}
                     height={396}
+                    imageFill={imageFill}
                   />
                 </div>
               </div>
@@ -221,43 +224,24 @@ const FeaturesSplit = ({
 
           {showArt && (
             <div className={splitClasses}>
-              <div className="split-item">
-                <div
-                  className="split-item-content center-content-mobile "
-                  data-reveal-container=".split-item">
-                  <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                    Art
-                  </div>
-                  <h3 className="mt-0 mb-12">Digital Art by Ved</h3>
-                  <p className="m-0">
-                    Ved makes stunning digital portraits in his unique Fast mask
-                    style.
-                  </p>
-                  <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                    <span className="testimonial-item-link">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://www.instagram.com/im_vedanshu/">
-                        Check him out
-                      </a>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  className={classNames(
-                    'split-item-image center-content-mobile ',
-                    imageFill && 'split-item-image-fill',
-                  )}
-                  data-reveal-container=".split-item">
-                  <Image
-                    src={vedArt}
-                    alt="Art-By-Ved"
-                    width={528}
-                    height={396}
-                  />
-                </div>
-              </div>
+              <ArtistView
+                type={'Custom Art'}
+                title={'Digital Art by Ved'}
+                desc={
+                  'Ved makes stunning digital portraits in his unique Fast mask style.'
+                }
+                image={vedArt}
+                link={'https://www.instagram.com/im_vedanshu/'}
+              />
+              <ArtistView
+                type={'Custom Art'}
+                title={'Digital Art by Chilly'}
+                desc={`Chilly's beautiful canvas style gives life to digital art.`}
+                image={chillyArt}
+                limited={true}
+                price={500}
+                link={'https://sparshbajaj.me/'}
+              />
             </div>
           )}
         </div>
