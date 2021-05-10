@@ -115,7 +115,7 @@ const Header = ({
                     <ul className="list-reset header-nav-right">
                       <li>
                         <a
-                          href="#signUp"
+                          href="/#signup"
                           className="button button-primary button-wide-mobile button-sm"
                           onClick={closeMenu}>
                           Sign up

@@ -48,7 +48,7 @@ const Cta = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div className="container" id="signUp">
+      <div className="container" id="signup">
         <div className={innerClasses}>
           <div className="cta-slogan">
             <h3 className="m-0">Donate & Sign Up</h3>

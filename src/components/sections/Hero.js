@@ -76,7 +76,7 @@ const Hero = ({
                     tag="a"
                     color="dark"
                     wideMobile
-                    href="#signUp">
+                    href="#signup">
                     Sign Up
                   </Button>
                 </div>
