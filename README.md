@@ -1,1 +1,1 @@
-# You help everyone. We help you.
+# We Make, You Donate.
