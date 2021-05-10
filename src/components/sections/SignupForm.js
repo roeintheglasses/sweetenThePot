@@ -73,7 +73,6 @@ export default function SignupForm() {
           required
         />
       </FormLabel>
-
       <button className="button button-dark mt-8" type="submit">
         Submit
       </button>

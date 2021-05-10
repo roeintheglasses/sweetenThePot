@@ -41,8 +41,7 @@ const Testimonial = ({
 
   const sectionHeader = {
     title: 'Where can I donate ?',
-    paragraph:
-      'Currently we support few verified covid relief charaties which are listed below. We will be adding more to this list in future. For now all you need to do is donate an amout of 200 or more and show up the proof.',
+    paragraph: `Currently, we only support few verified covid relief organizations which are listed below. The list will keep getting updated as our team verifies more organizations as well. For now, all you need to do is donate an amount of ₹200 or more to any of the following organizations to receive a token of appreciation.`,
   };
 
   return (

@@ -61,8 +61,10 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: 'What is this ? ',
-    paragraph:
-      'Sweeten The Pot is an initiative by few CS Grads that aims to help in raising money for Covid Relif while ensuring there is an active incentive for people to donate. You can think of this as a community service. All you need to do is Donate an amount of 200 or more to one of the Covid Relif charaties listed below and show up the proof to us. In return we will get you a stunning Portfolio website / Art  ( More insentives will be added in future). It is that simple.',
+    paragraph: `Sweeten The Pot is a not-for-profit initiative taken by a few CS grads that aims to help raise money for Covid Relief. We give you an incentive for your charity.
+      All you need to do is Donate an amount of ₹200 or more to one of the Covid Relief charities listed below and send a proof of your donation. In return, we will get you a stunning Portfolio website or a personalized art piece*.
+      Here's a small gift to the selfless givers of our community. Keep giving, keep serving, keep donating, keep distancing and keep up the good work.
+      We're in this together.`,
   };
 
   return (
@@ -70,6 +72,11 @@ const FeaturesSplit = ({
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content">
+            <br />
+            <p style={{fontSize: 14}}>
+              *more exciting incentives to come, keep an eye out for them on our
+              social media platforms.
+            </p>
             <h6>Check out stuff below ⬇</h6>
           </SectionHeader>
 
