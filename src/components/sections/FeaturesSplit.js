@@ -62,7 +62,7 @@ const FeaturesSplit = ({
   const sectionHeader = {
     title: 'What is this ? ',
     paragraph:
-      'Sweeten The Pot is an initiative by few CS Grads that aims to help in raising money for Covid Relif while ensuring there is an active incentive for people to donate. You can think of this as a community service. All you need to do is Donate an amount of 200 or more to one of the Covid Relif charaties listed below and show up the proof to us. In return we will get you a dope-ass portfolio website / Art ( More insentives will be added in future). It is that simple.',
+      'Sweeten The Pot is an initiative by few CS Grads that aims to help in raising money for Covid Relif while ensuring there is an active incentive for people to donate. You can think of this as a community service. All you need to do is Donate an amount of 200 or more to one of the Covid Relif charaties listed below and show up the proof to us. In return we will get you a stunning Portfolio website / Art  ( More insentives will be added in future). It is that simple.',
   };
 
   return (
@@ -70,7 +70,7 @@ const FeaturesSplit = ({
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content">
-            <h5>We Make, You Donate.</h5>
+            <h6>Check out stuff below ⬇</h6>
           </SectionHeader>
 
           <ButtonGroup className="splitButtonGroup mb-24">
