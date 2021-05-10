@@ -188,7 +188,9 @@ const FeaturesSplit = ({
                     Portfolio Template 3
                   </div>
                   <h3 className="mt-0 mb-12"> Universal Folio</h3>
-                  <p className="m-0">A Clean, Minimal and Unique portfolio.</p>
+                  <p className="m-0">
+                    A Clean, Minimal and Unique portfolio for Everyone.
+                  </p>
                   <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                     <span className="testimonial-item-link">
                       <a
