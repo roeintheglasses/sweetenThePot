@@ -228,8 +228,8 @@ const FeaturesSplit = ({
                   </div>
                   <h3 className="mt-0 mb-12">Digital Art by Ved</h3>
                   <p className="m-0">
-                    Ved makes absolutest stunning digital portraits in his
-                    unique Fast mask style.
+                    Ved makes stunning digital portraits in his unique Fast mask
+                    style.
                   </p>
                   <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                     <span className="testimonial-item-link">
