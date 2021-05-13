@@ -35,8 +35,8 @@ const Footer = ({className, topOuterDivider, topDivider, ...props}) => {
           </div>
           <div className="footer-bottom center text-l">
             <div className="footer-copyright">
-              Made with ❤ by Roe & Friends | Images by{' '}
-              <a href="https://storyset.com/">Storyset</a>{' '}
+              Made with ❤ by Roe & Friends <br /> Images by
+              <a href="https://storyset.com/"> Storyset</a>
             </div>
           </div>
         </div>

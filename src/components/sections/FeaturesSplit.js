@@ -151,8 +151,6 @@ const FeaturesSplit = ({
                 title={'Digital Art by Chilly'}
                 desc={`Chilly's beautiful canvas style gives life to digital art.`}
                 image={chillyArt}
-                limited={true}
-                price={500}
                 link={'https://sparshbajaj.me/'}
               />
             </div>
