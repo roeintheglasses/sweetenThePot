@@ -43,8 +43,14 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	height: 100%;
+	height: 50vh;
 	padding: $tiles-item--inner-padding-v $tiles-item--inner-padding-h;
+}
+
+@media (max-width:678px) {
+	.tiles-item-inner {
+		height: 100%;
+	}
 }
 
 @if ( $tiles-items--padding__desktop != null ) {

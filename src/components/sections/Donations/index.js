@@ -17,7 +17,17 @@ const settings = {
   infinite: true,
   autoplay: true,
   pauseOnFocus: true,
-  speed: 200,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 2,
+};
+
+const mobileSettings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  pauseOnFocus: true,
+  speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -48,7 +58,7 @@ const Testimonial = ({
     bottomDivider && 'has-bottom-divider',
   );
 
-  const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
+  // const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
 
   const sectionHeader = {
     title: 'Where can I donate ?',
@@ -60,58 +70,103 @@ const Testimonial = ({
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
-          <Slider {...settings}>
-            <>
-              <div className={tilesClasses}>
-                <OrgView
-                  title={'Goonj'}
-                  desc={` Goonj's "Rahat Covid" is providing essentials like ration
+
+          {/* Slider for desktops */}
+          <div className="hidden-mobile">
+            <Slider {...settings}>
+              <OrgView
+                title={'Goonj'}
+                desc={` Goonj is providing essentials like ration
+                    and hygiene material to daily wagers, migrant
+                    workers and people struggling for the basics in the villages
+                    of India amid this covid crisis.`}
+                link={
+                  'http://goonj.org/donate/?gclid=CjwKCAjwkN6EBhBNEiwADVfya9fHEkOa4tfPq3FsFqvCngE7I5Ld7klgIXkSNuI-X_pAnPu7WrwLoBoC39cQAvD_BwE'
+                }
+              />
+              <OrgView
+                title={'Hemkunt Foundation'}
+                desc={`  With over 2 million active cases currently, Hemkunt
+              foundation wants to increase their efforts this year by
+              helping people get oxygen supplies. You can help them.`}
+                link={
+                  'https://www.donatekart.com/Hemkunt-Foundation/Give-Oxygen-Cylinders/?gclid=CjwKCAjwkN6EBhBNEiwADVfyawS3KBknjY70F2Urj4-d6558bY7kzO76VvxJyusDelKDEILaHK9o5RoC7SAQAvD_BwE'
+                }
+              />
+              <OrgView
+                title={'Feeding India by Zomato'}
+                desc={`Feeding India is providing hospitals and patients with oxygen and related
+              supplies. Help them save thousands of lives.`}
+                link={
+                  'http://goonj.org/donate/?gclid=CjwKCAjwkN6EBhBNEiwADVfya9fHEkOa4tfPq3FsFqvCngE7I5Ld7klgIXkSNuI-X_pAnPu7WrwLoBoC39cQAvD_BwE'
+                }
+              />
+              <OrgView
+                title={'Act Grant'}
+                desc={` Act is centrally distributing oxygen on behalf of the entire Indian startup ecosystem while also partnering with the government to support their efforts in this crisis.`}
+                link={'https://actgrants.in/donate/'}
+              />
+              <OrgView
+                title={'Give India'}
+                desc={` Give India are providing sanitary napkins for women affected by the Pandemic.`}
+                link={'https://covid.giveindia.org/safeperiod/'}
+              />
+              <OrgView
+                title={'Paytm Foundation '}
+                desc={`Paytm Foundation is raising ₹14 crore to donate Oxygen Concentrators across India. Paytm will match the contributions received through this initiative.`}
+                link={'https://paytm.com/offer/donate-oxygen'}
+              />
+            </Slider>
+          </div>
+
+          {/* Slider for mobile */}
+          <div className="hidden-desktop m-12">
+            <Slider {...mobileSettings}>
+              <OrgView
+                title={'Goonj'}
+                desc={` Goonj's "Rahat Covid" is providing essentials like ration
                     and hygiene material, with dignity, to daily wagers, migrant
                     workers and people struggling for the basics in the villages
                     of India amid this covid crisis.`}
-                  link={
-                    'http://goonj.org/donate/?gclid=CjwKCAjwkN6EBhBNEiwADVfya9fHEkOa4tfPq3FsFqvCngE7I5Ld7klgIXkSNuI-X_pAnPu7WrwLoBoC39cQAvD_BwE'
-                  }
-                />
-                <OrgView
-                  title={'Hemkunt Foundation'}
-                  desc={`  With over 2 million active cases currently, Hemkunt
+                link={
+                  'http://goonj.org/donate/?gclid=CjwKCAjwkN6EBhBNEiwADVfya9fHEkOa4tfPq3FsFqvCngE7I5Ld7klgIXkSNuI-X_pAnPu7WrwLoBoC39cQAvD_BwE'
+                }
+              />
+              <OrgView
+                title={'Hemkunt Foundation'}
+                desc={`  With over 2 million active cases currently, Hemkunt
               foundation wants to increase their efforts this year by
               helping people get oxygen supplies. You can help them.`}
-                  link={
-                    'https://www.donatekart.com/Hemkunt-Foundation/Give-Oxygen-Cylinders/?gclid=CjwKCAjwkN6EBhBNEiwADVfyawS3KBknjY70F2Urj4-d6558bY7kzO76VvxJyusDelKDEILaHK9o5RoC7SAQAvD_BwE'
-                  }
-                />
-                <OrgView
-                  title={'Feeding India by Zomato'}
-                  desc={`Feeding India is providing hospitals and patients with oxygen and related
+                link={
+                  'https://www.donatekart.com/Hemkunt-Foundation/Give-Oxygen-Cylinders/?gclid=CjwKCAjwkN6EBhBNEiwADVfyawS3KBknjY70F2Urj4-d6558bY7kzO76VvxJyusDelKDEILaHK9o5RoC7SAQAvD_BwE'
+                }
+              />
+              <OrgView
+                title={'Feeding India by Zomato'}
+                desc={`Feeding India is providing hospitals and patients with oxygen and related
               supplies. Help them save thousands of lives.`}
-                  link={
-                    'http://goonj.org/donate/?gclid=CjwKCAjwkN6EBhBNEiwADVfya9fHEkOa4tfPq3FsFqvCngE7I5Ld7klgIXkSNuI-X_pAnPu7WrwLoBoC39cQAvD_BwE'
-                  }
-                />
-              </div>
-            </>
-            <>
-              <div className={tilesClasses}>
-                <OrgView
-                  title={'Act Grant'}
-                  desc={` Act is centrally distributing oxygen on behalf of the entire Indian startup ecosystem while also partnering with the government to support their efforts in this crisis.`}
-                  link={'https://actgrants.in/donate/'}
-                />
-                <OrgView
-                  title={'Give India'}
-                  desc={` Give India are providing sanitary napkins for women affected by the Pandemic.`}
-                  link={'https://covid.giveindia.org/safeperiod/'}
-                />
-                <OrgView
-                  title={'Paytm Foundation '}
-                  desc={`Paytm Foundation is raising ₹14 crore to donate Oxygen Concentrators across India to patients who are in need of Oxygen supply right now. Paytm will match the contributions received through this initiative.`}
-                  link={'https://paytm.com/offer/donate-oxygen'}
-                />
-              </div>
-            </>
-          </Slider>
+                link={
+                  'http://goonj.org/donate/?gclid=CjwKCAjwkN6EBhBNEiwADVfya9fHEkOa4tfPq3FsFqvCngE7I5Ld7klgIXkSNuI-X_pAnPu7WrwLoBoC39cQAvD_BwE'
+                }
+              />
+
+              <OrgView
+                title={'Act Grant'}
+                desc={` Act is centrally distributing oxygen on behalf of the entire Indian startup ecosystem while also partnering with the government to support their efforts in this crisis.`}
+                link={'https://actgrants.in/donate/'}
+              />
+              <OrgView
+                title={'Give India'}
+                desc={` Give India are providing sanitary napkins for women affected by the Pandemic.`}
+                link={'https://covid.giveindia.org/safeperiod/'}
+              />
+              <OrgView
+                title={'Paytm Foundation '}
+                desc={`Paytm Foundation is raising ₹14 crore to donate Oxygen Concentrators across India to patients who are in need of Oxygen supply right now. Paytm will match the contributions received through this initiative.`}
+                link={'https://paytm.com/offer/donate-oxygen'}
+              />
+            </Slider>
+          </div>
         </div>
       </div>
     </section>
